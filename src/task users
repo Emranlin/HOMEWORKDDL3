@@ -1,0 +1,11 @@
+SELECT * FROM users;
+alter table  users add column SALARY int;
+select * from users where ID IN(1, 2, 3, 7, 9) and email in ('pmatokhnin1z@timesonline.co.uk','uchipps1t@blogspot.com','nclinning1p@xinhuanet.com') AND users.SALARY>35000;
+select * from users where id in(1,2,3,7,9) and email in('user', 'admin', 'house') and salary > 3500;
+select * from users where salary between 3000 and 5000 offset 3 limit 7;alter table users rename column id to users_id;
+alter table users rename column salary to users_salary;
+alter table users rename column email to users_login;alter table users add column res int;select concat('3', age) as res from users;
+select concat('Age: ', age, 'Salary: ', salary) as res from users;
+select concat('Age: ', age,'!!!', 'Salary: ', salary) as res from users;
+select concat('Age: ', age,'-', 'Salary: ', salary) as res from users;
+select concat(substring(email, 5),'...') from users;
